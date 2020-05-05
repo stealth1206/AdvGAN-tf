@@ -44,7 +44,7 @@ def perturb_loss(preds, thresh=0.3):
 
 
 # function that defines ops, graphs, and training procedure for AdvGAN framework
-def AdvGAN(X, y, X_test, y_test, epochs=50, batch_size=128, target=-1):
+def AdvGAN(X, y, X_test, y_test, epochs=50, batch_size=128, target=1):
 	# placeholder definitions
 	x_pl = tf.placeholder(tf.float32, [None, X.shape[1], X.shape[2], X.shape[3]]) # image placeholder
 	t = tf.placeholder(tf.float32, [None, y.shape[-1]]) # target placeholder
